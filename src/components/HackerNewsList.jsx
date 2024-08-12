@@ -24,7 +24,7 @@ const HackerNewsList = ({ searchTerm }) => {
   ) || [];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 bg-white p-4 rounded-lg shadow-lg">
       {isLoading
         ? Array(9).fill().map((_, index) => <StoryCardSkeleton key={index} />)
         : filteredStories.map(story => <StoryCard key={story.objectID} story={story} />)
