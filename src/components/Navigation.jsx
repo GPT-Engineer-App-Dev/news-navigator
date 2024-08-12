@@ -13,7 +13,7 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-white p-4 shadow-lg">
+    <nav className="bg-gradient-to-r from-green-600 to-green-800 text-white p-4 shadow-lg">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link to="/" className="text-white text-2xl font-bold flex items-center">
           <motion.div
@@ -21,9 +21,9 @@ const Navigation = () => {
             animate={{ rotate: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Newspaper className="mr-2 text-gray-300" size={28} />
+            <Newspaper className="mr-2 text-green-200" size={28} />
           </motion.div>
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-gray-400">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-green-200">
             HN Reader
           </span>
         </Link>
@@ -32,7 +32,7 @@ const Navigation = () => {
           <NavLink to="/about" icon={<Info className="w-5 h-5" />} label="About" isActive={location.pathname === '/about'} />
           <motion.button
             onClick={toggleDarkMode}
-            className="p-2 bg-gray-700 text-white rounded-full"
+            className="p-2 bg-green-700 text-white rounded-full hover:bg-green-600 transition-colors duration-300"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -48,7 +48,7 @@ const NavLink = ({ to, icon, label, isActive }) => (
   <Link to={to}>
     <motion.span
       className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
-        isActive ? 'bg-gray-700 text-white' : 'text-gray-300 hover:bg-gray-800'
+        isActive ? 'bg-green-700 text-white' : 'text-green-100 hover:bg-green-700 hover:text-white'
       }`}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
