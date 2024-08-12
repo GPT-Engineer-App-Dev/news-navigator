@@ -36,7 +36,7 @@ const HackerNewsList = ({ searchTerm }) => {
 
   return (
     <motion.div 
-      className="bg-white bg-opacity-10 backdrop-blur-lg p-8 rounded-xl shadow-2xl"
+      className="bg-white dark:bg-gray-800 bg-opacity-10 dark:bg-opacity-10 backdrop-blur-lg p-8 rounded-xl shadow-2xl"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.4 }}
@@ -74,15 +74,15 @@ const HackerNewsList = ({ searchTerm }) => {
           <button
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
-            className="p-2 bg-blue-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-blue-600"
+            className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600"
           >
             <ChevronLeft size={24} />
           </button>
-          <span className="text-white font-bold">Page {currentPage}</span>
+          <span className="text-gray-800 dark:text-white font-bold">Page {currentPage}</span>
           <button
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastStory >= filteredStories.length}
-            className="p-2 bg-blue-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-blue-600"
+            className="p-2 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-gray-300 dark:hover:bg-gray-600"
           >
             <ChevronRight size={24} />
           </button>

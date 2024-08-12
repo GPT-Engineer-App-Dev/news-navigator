@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-8 mt-8">
+    <footer className="bg-gradient-to-r from-gray-100 to-white dark:from-gray-900 dark:to-gray-800 text-gray-800 dark:text-white py-8 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <motion.div 
@@ -13,18 +13,18 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-800 to-gray-600 dark:from-gray-200 dark:to-gray-400">
               Hacker News Reader
             </span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              <Heart className="w-6 h-6 ml-2 text-blue-300" />
+              <Heart className="w-6 h-6 ml-2 text-gray-600 dark:text-gray-300" />
             </motion.div>
           </motion.div>
           <motion.p 
-            className="text-sm mb-6 text-center"
+            className="text-sm mb-6 text-center text-gray-600 dark:text-gray-300"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -38,7 +38,7 @@ const Footer = () => {
             <SocialLink href="https://linkedin.com" icon={<Linkedin />} label="LinkedIn" />
           </div>
           <motion.p 
-            className="text-sm text-center"
+            className="text-sm text-center text-gray-600 dark:text-gray-300"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -56,10 +56,10 @@ const SocialLink = ({ href, icon, label }) => (
     href={href}
     target="_blank" 
     rel="noopener noreferrer" 
-    className="text-sm hover:text-blue-300 transition-colors duration-300 flex flex-col items-center"
+    className="text-sm hover:text-gray-800 dark:hover:text-gray-200 transition-colors duration-300 flex flex-col items-center"
     whileHover={{ scale: 1.1 }}
   >
-    {React.cloneElement(icon, { className: "w-6 h-6 mb-1" })}
+    {React.cloneElement(icon, { className: "w-6 h-6 mb-1 text-gray-600 dark:text-gray-300" })}
     <span>{label}</span>
   </motion.a>
 );
