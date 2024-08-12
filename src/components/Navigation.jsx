@@ -1,10 +1,16 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Home, Info, Newspaper } from 'lucide-react';
+import { Home, Info, Newspaper, Sun, Moon } from 'lucide-react';
 
 const Navigation = () => {
   const location = useLocation();
+  const [isDarkMode, setIsDarkMode] = React.useState(false);
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    // Here you would typically toggle a class on the body or update a context
+  };
 
   return (
     <nav className="bg-gradient-to-r from-red-800 to-red-600 p-4 shadow-lg">
@@ -17,11 +23,21 @@ const Navigation = () => {
           >
             <Newspaper className="mr-2 text-yellow-300" size={28} />
           </motion.div>
-          HN Reader
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-red-300">
+            HN Reader
+          </span>
         </Link>
-        <div className="space-x-4">
+        <div className="flex items-center space-x-4">
           <NavLink to="/" icon={<Home className="w-5 h-5" />} label="Home" isActive={location.pathname === '/'} />
           <NavLink to="/about" icon={<Info className="w-5 h-5" />} label="About" isActive={location.pathname === '/about'} />
+          <motion.button
+            onClick={toggleDarkMode}
+            className="p-2 bg-yellow-300 text-red-800 rounded-full"
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            {isDarkMode ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+          </motion.button>
         </div>
       </div>
     </nav>
