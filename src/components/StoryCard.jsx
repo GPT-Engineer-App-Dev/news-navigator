@@ -10,10 +10,10 @@ const StoryCard = ({ story }) => {
       whileHover={{ scale: 1.05, rotate: 1 }} 
       transition={{ duration: 0.2 }}
     >
-      <Card className="flex flex-col h-full bg-gradient-to-br from-red-700 to-red-900 shadow-lg hover:shadow-xl transition-all duration-300 border border-red-300 overflow-hidden">
+      <Card className="flex flex-col h-full bg-gradient-to-br from-blue-700 to-blue-900 shadow-lg hover:shadow-xl transition-all duration-300 border border-blue-300 overflow-hidden">
         <CardContent className="flex-grow pt-6 relative">
           <motion.div
-            className="absolute top-0 right-0 bg-yellow-300 text-red-800 px-3 py-1 rounded-bl-lg font-bold"
+            className="absolute top-0 right-0 bg-blue-300 text-blue-800 px-3 py-1 rounded-bl-lg font-bold"
             initial={{ x: 100 }}
             animate={{ x: 0 }}
             transition={{ duration: 0.3 }}
@@ -23,15 +23,15 @@ const StoryCard = ({ story }) => {
           <h2 className="text-lg font-semibold mb-3 line-clamp-2 text-white">{story.title}</h2>
           <div className="flex flex-wrap items-center justify-between text-sm text-gray-300 mb-2">
             <div className="flex items-center mr-4 mb-2">
-              <ArrowUpCircle className="w-4 h-4 mr-1 text-yellow-300" />
+              <ArrowUpCircle className="w-4 h-4 mr-1 text-blue-300" />
               <span>{story.points} points</span>
             </div>
             <div className="flex items-center mr-4 mb-2">
-              <Clock className="w-4 h-4 mr-1 text-yellow-300" />
+              <Clock className="w-4 h-4 mr-1 text-blue-300" />
               <span>{new Date(story.created_at).toLocaleDateString()}</span>
             </div>
             <div className="flex items-center mb-2">
-              <User className="w-4 h-4 mr-1 text-yellow-300" />
+              <User className="w-4 h-4 mr-1 text-blue-300" />
               <span>{story.author}</span>
             </div>
           </div>
@@ -39,7 +39,7 @@ const StoryCard = ({ story }) => {
         <CardFooter>
           <Button
             variant="outline"
-            className="w-full bg-yellow-300 text-red-800 hover:bg-red-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 font-bold"
+            className="w-full bg-blue-300 text-blue-800 hover:bg-blue-600 hover:text-white transition-all duration-300 transform hover:-translate-y-1 font-bold"
             onClick={() => window.open(story.url, '_blank', 'noopener,noreferrer')}
           >
             Read More <ExternalLink className="w-4 h-4 ml-2" />

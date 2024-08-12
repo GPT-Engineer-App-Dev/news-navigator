@@ -74,7 +74,7 @@ const HackerNewsList = ({ searchTerm }) => {
           <button
             onClick={() => paginate(currentPage - 1)}
             disabled={currentPage === 1}
-            className="p-2 bg-red-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-red-600"
+            className="p-2 bg-blue-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-blue-600"
           >
             <ChevronLeft size={24} />
           </button>
@@ -82,7 +82,7 @@ const HackerNewsList = ({ searchTerm }) => {
           <button
             onClick={() => paginate(currentPage + 1)}
             disabled={indexOfLastStory >= filteredStories.length}
-            className="p-2 bg-red-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-red-600"
+            className="p-2 bg-blue-700 text-white rounded-full disabled:opacity-50 transition-all duration-300 hover:bg-blue-600"
           >
             <ChevronRight size={24} />
           </button>

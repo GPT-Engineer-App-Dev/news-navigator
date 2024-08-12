@@ -16,7 +16,7 @@ const Index = () => {
   }, [controls]);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 to-red-800 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex flex-col">
       <main className="flex-grow p-8">
         <div className="max-w-7xl mx-auto">
           <motion.h1 
@@ -31,14 +31,14 @@ const Index = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="mb-4"
             >
-              <Newspaper className="text-yellow-300" size={72} />
+              <Newspaper className="text-blue-300" size={72} />
             </motion.div>
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-red-300">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">
               Hacker News Top Stories
             </span>
           </motion.h1>
           <motion.p
-            className="text-xl text-center text-yellow-100 mb-8"
+            className="text-xl text-center text-blue-100 mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.5 }}
@@ -54,17 +54,17 @@ const Index = () => {
             <Input
               type="text"
               placeholder="Search stories..."
-              className="pl-12 pr-4 py-3 rounded-full shadow-xl bg-white bg-opacity-20 backdrop-blur-lg text-white placeholder-gray-300 border-2 border-red-300 focus:border-yellow-300 transition-all duration-300"
+              className="pl-12 pr-4 py-3 rounded-full shadow-xl bg-white bg-opacity-20 backdrop-blur-lg text-white placeholder-gray-300 border-2 border-blue-300 focus:border-blue-100 transition-all duration-300"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-yellow-300" size={24} />
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-blue-300" size={24} />
           </motion.div>
           <motion.div
             animate={controls}
             className="flex justify-center mb-8"
           >
-            <ArrowDown className="text-yellow-300" size={32} />
+            <ArrowDown className="text-blue-300" size={32} />
           </motion.div>
           <HackerNewsList searchTerm={searchTerm} />
         </div>

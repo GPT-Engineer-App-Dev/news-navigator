@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-red-800 to-red-600 text-white py-8 mt-8">
+    <footer className="bg-gradient-to-r from-blue-800 to-blue-600 text-white py-8 mt-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center">
           <motion.div 
@@ -13,14 +13,14 @@ const Footer = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-red-300">
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-300 to-blue-100">
               Hacker News Reader
             </span>
             <motion.div
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ repeat: Infinity, duration: 1.5 }}
             >
-              <Heart className="w-6 h-6 ml-2 text-yellow-300" />
+              <Heart className="w-6 h-6 ml-2 text-blue-300" />
             </motion.div>
           </motion.div>
           <motion.p 
@@ -56,7 +56,7 @@ const SocialLink = ({ href, icon, label }) => (
     href={href}
     target="_blank" 
     rel="noopener noreferrer" 
-    className="text-sm hover:text-yellow-300 transition-colors duration-300 flex flex-col items-center"
+    className="text-sm hover:text-blue-300 transition-colors duration-300 flex flex-col items-center"
     whileHover={{ scale: 1.1 }}
   >
     {React.cloneElement(icon, { className: "w-6 h-6 mb-1" })}

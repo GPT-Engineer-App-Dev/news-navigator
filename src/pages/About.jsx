@@ -4,15 +4,15 @@ import { Newspaper, Code, Zap, Search, Layout, Smartphone } from 'lucide-react';
 
 const About = () => {
   const features = [
-    { icon: <Zap className="w-6 h-6 text-yellow-300" />, text: "Real-time updates of top stories" },
-    { icon: <Search className="w-6 h-6 text-yellow-300" />, text: "Search functionality to find specific stories" },
-    { icon: <Layout className="w-6 h-6 text-yellow-300" />, text: "Clean and intuitive user interface" },
-    { icon: <Code className="w-6 h-6 text-yellow-300" />, text: "Quick access to original story links" },
-    { icon: <Smartphone className="w-6 h-6 text-yellow-300" />, text: "Responsive design for all devices" },
+    { icon: <Zap className="w-6 h-6 text-blue-300" />, text: "Real-time updates of top stories" },
+    { icon: <Search className="w-6 h-6 text-blue-300" />, text: "Search functionality to find specific stories" },
+    { icon: <Layout className="w-6 h-6 text-blue-300" />, text: "Clean and intuitive user interface" },
+    { icon: <Code className="w-6 h-6 text-blue-300" />, text: "Quick access to original story links" },
+    { icon: <Smartphone className="w-6 h-6 text-blue-300" />, text: "Responsive design for all devices" },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-600 to-red-800 flex flex-col">
+    <div className="min-h-screen bg-gradient-to-br from-blue-600 to-blue-800 flex flex-col">
       <main className="flex-grow p-8">
         <div className="max-w-4xl mx-auto bg-white bg-opacity-10 backdrop-blur-lg rounded-xl shadow-2xl p-8">
           <motion.h1 
@@ -26,7 +26,7 @@ const About = () => {
               animate={{ rotate: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
             >
-              <Newspaper className="mr-4 text-yellow-300" size={48} />
+              <Newspaper className="mr-4 text-blue-300" size={48} />
             </motion.div>
             About Hacker News Reader
           </motion.h1>
@@ -38,7 +38,7 @@ const About = () => {
             <p className="text-white mb-6 text-lg leading-relaxed">
               Welcome to the Hacker News Reader, a cutting-edge interface designed to bring you the top stories from the tech world. Our app leverages the Algolia API to fetch the latest 100 top stories from Hacker News, ensuring you're always up-to-date with the most engaging and popular content in the tech community.
             </p>
-            <h2 className="text-2xl font-semibold mb-4 text-yellow-300">Key Features</h2>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-300">Key Features</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
               {features.map((feature, index) => (
                 <motion.li 
